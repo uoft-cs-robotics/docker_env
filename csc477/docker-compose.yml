@@ -1,0 +1,24 @@
+version: "2.4"
+services:
+  csc477:
+    build:
+      context: ..
+      dockerfile: csc477/Dockerfile
+    container_name: csc477
+    tty: true
+    cap_add:
+      - SYS_NICE
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    ulimits:
+      rtprio: 99
+      rttime: -1
+      memlock: 8428281856
+    network_mode: host
+    privileged: true
+    devices:
+    - /dev:/dev
+    runtime: nvidia
+    volumes:
+      - ../home:/root/home
+
