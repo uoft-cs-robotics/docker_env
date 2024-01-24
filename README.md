@@ -35,7 +35,10 @@ To open docker container's terminal
 docker exec -it csc477 bash 
 ```
 
-The home folder in this repo will be mounted to the docker container at /root/home inside the docker container (see file [docker-compose.yml](csc477/docker-compose.yml) line 23). This happens when you run "docker-compose ... create". You can create your ROS workspace here and compile it from within the docker container and yet read its source code from the host machine using your favorite IDE.
+The home folder in this repo will be mounted to the docker container at /root/home inside the docker container (see file [docker-compose.yml](csc477/docker-compose.yml) line 23). This happens when you run "docker-compose ... create". You can create your ROS workspace here and compile it from within the docker container and yet read its source code from the host machine using your favorite IDE. You might also have to run the following from inside the docker to access the directories and files inside home, 
+```
+chmod 777 -R /root/home
+```
 
 ## Notes: 
 - If you are unable to access a directory or file in the host machine you created inside the docker container, run from inside the docker container,
