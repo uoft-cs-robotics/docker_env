@@ -10,8 +10,8 @@ dockerfile and docker compose yaml files used to build docker environments
 
 ```
 cd <path_to_repository>/docker_env 
-docker-compose -f csc477/docker-compose-gui.yml build
-docker-compose -f csc477/docker-compose-gui.yml create
+docker compose -f csc477/docker-compose-gui.yml build
+docker compose -f csc477/docker-compose-gui.yml create
 ```
 ## Note to CSC477 students 
 This docker setup is useful when you're using your own Ubuntu machine or if you are accessing UTM lab machines using VNC. This setup is not tested for Windows/Mac host machines. 
@@ -22,7 +22,7 @@ This docker setup is useful when you're using your own Ubuntu machine or if you 
 Start the prebuilt container 
 ```
 cd <path_to_repository>/docker_env 
-docker-compose -f csc477/docker-compose-gui.yml build
+docker compose -f csc477/docker-compose-gui.yml build
 ```
 
 To get GUI access run this in every terminal you are running the docker container's terminal. or you can add it to your ~/.bashrc
