@@ -47,11 +47,8 @@ chmod 777 -R /root/home
 
 ## Build instructions for CSC477 ROS packages 
 
-Assuming you already have the docker container running,open a new terminal inside the docker running by running this in the hostmachine's terminal 
-```
-docker exec -it csc477 bash 
-```
-Once you have opened a bash terminal inside your container, create your catkin workspace, 
+Assuming you already have the docker container running and you have executed the docker exec command in the section above, 
+you can create your catkin workspace in the terminal inside your docker container: 
 
 ```
 cd /root/home 
@@ -60,7 +57,7 @@ cd csc477_ws/src
 catkin_init_workspace
 ```
 
-Clone the ROS packages to the new workspace, 
+Clone the CSC477 ROS packages to the new workspace, 
 ```
 cd /root/home/csc477_ws/src 
 git clone https://github.com/florianshkurti/csc477_winter24
