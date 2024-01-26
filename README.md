@@ -22,15 +22,17 @@ This docker setup is useful when you're using your own or DH Labs Ubuntu machine
 
 ## Usage 
 
+
+To get GUI access run this in every terminal of the host machine that you are running the docker container's terminal in. or you can add it to your ~/.bashrc in the hostmachine 
+
+```
+xhost +local:docker
+```
+
 Start the prebuilt container 
 ```
 cd ~/docker_env 
 docker compose -f csc477/docker-compose-gui.yml start
-```
-
-To get GUI access run this in every terminal you are running the docker container's terminal. or you can add it to your ~/.bashrc
-```
-xhost +local:docker
 ```
 
 To open docker container's terminal 
