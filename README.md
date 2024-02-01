@@ -1,7 +1,7 @@
 # Description 
 dockerfile and docker compose yaml files used to build docker environments 
 
-## Dependancies
+## Dependencies
 - docker.io
 - docker compose 
 
